@@ -1,0 +1,32 @@
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Windows
+$RECYCLE.BIN/
+
+# IDEs / Editores
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.sublime-project
+*.sublime-workspace
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Archivos temporales
+*.tmp
+*.bak
+*.orig
+.env
+.env.local
+
+# PDF original (no se sube al repo, se mantiene solo en local)
+Propuesta_Web_CasaCuento_Alexis.pdf
