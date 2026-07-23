@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Propuesta Comercial · CasaCuento Hotel & Spa</title>
+<style>
+  :root {
+    --forest: #2E4A3E;
+    --forest-light: #3D5A4E;
+    --sand: #F5F0E8;
+    --sand-dark: #E8DFD4;
+    --gold: #C9A962;
+    --gold-light: #D4B87A;
+    --cream: #FAF8F5;
+    --white: #FFFFFF;
+    --text: #2D2D2D;
+    --text-muted: #6B6B6B;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    line-height: 1.7;
+    color: var(--text);
+    background: var(--cream);
+  }
+  .page {
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    box-shadow: 0 0 40px rgba(0,0,0,0.08);
+  }
+  .cover {
+    background: linear-gradient(135deg, var(--forest) 0%, var(--forest-light) 100%);
+    color: white;
+    padding: 80px 60px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .cover::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: radial-gradient(circle at 20% 30%, rgba(201,169,98,0.15) 0%, transparent 50%);
+  }
+  .cover-eyebrow {
+    font-size: 0.85rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    margin-bottom: 24px;
+    position: relative;
+  }
+  .cover h1 {
+    font-family: Georgia, serif;
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+    position: relative;
+  }
+  .cover h2 {
+    font-size: 1.25rem;
+    font-weight: 300;
+    margin-bottom: 32px;
+    opacity: 0.95;
+    position: relative;
+  }
+  .cover-tagline {
+    display: inline-block;
+    padding: 8px 20px;
+    border: 1px solid rgba(201,169,98,0.5);
+    border-radius: 100px;
+    color: var(--gold-light);
+    font-size: 0.9rem;
+    position: relative;
+  }
+  .content { padding: 60px; }
+  section { margin-bottom: 50px; }
+  .section-num {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    background: var(--gold);
+    color: var(--forest);
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 0.95rem;
+    margin-bottom: 16px;
+  }
+  h3 {
+    font-family: Georgia, serif;
+    font-size: 1.8rem;
+    color: var(--forest);
+    margin-bottom: 16px;
+    font-weight: 600;
+  }
+  h4 {
+    font-size: 1.15rem;
+    color: var(--forest);
+    margin: 24px 0 12px;
+    font-weight: 600;
+  }
+  p { margin-bottom: 12px; color: var(--text); }
+  .lead { font-size: 1.1rem; color: var(--text-muted); }
+
+  .highlight {
+    background: var(--sand);
+    border-left: 4px solid var(--gold);
+    padding: 20px 24px;
+    margin: 24px 0;
+    border-radius: 0 8px 8px 0;
+  }
+
+  ul { margin: 12px 0 12px 24px; }
+  li { margin-bottom: 8px; }
+  li::marker { color: var(--gold); }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+    margin: 24px 0;
+  }
+  .feature {
+    background: var(--cream);
+    border: 1px solid var(--sand-dark);
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+  }
+  .feature-icon {
+    font-size: 2rem;
+    margin-bottom: 8px;
+  }
+  .feature-title {
+    font-weight: 600;
+    color: var(--forest);
+    margin-bottom: 4px;
+  }
+  .feature-desc {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+  }
+
+  .phases {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin: 24px 0;
+  }
+  .phase {
+    background: var(--cream);
+    border: 2px solid var(--sand-dark);
+    border-radius: 12px;
+    padding: 24px 20px;
+    position: relative;
+    transition: all 0.2s;
+  }
+  .phase.current {
+    border-color: var(--gold);
+    background: linear-gradient(135deg, rgba(201,169,98,0.08), var(--cream));
+  }
+  .phase-badge {
+    position: absolute;
+    top: -10px; right: 12px;
+    background: var(--gold);
+    color: var(--forest);
+    padding: 2px 12px;
+    border-radius: 100px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .phase-title {
+    font-family: Georgia, serif;
+    font-size: 1.1rem;
+    color: var(--forest);
+    margin-bottom: 8px;
+  }
+  .phase-status {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--gold);
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .phase-list {
+    font-size: 0.875rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .phase-list li {
+    padding: 4px 0 4px 18px;
+    position: relative;
+  }
+  .phase-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+    font-weight: 700;
+  }
+
+  .pricing {
+    background: var(--forest);
+    color: white;
+    padding: 40px;
+    border-radius: 16px;
+    margin: 24px 0;
+  }
+  .pricing-title {
+    color: var(--gold-light);
+    font-family: Georgia, serif;
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+  .price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+  .price-row:last-child { border-bottom: none; }
+  .price-row strong { color: var(--gold-light); }
+  .price-row .label { flex: 1; }
+  .price-row .value { font-weight: 600; }
+  .price-row .free { color: var(--gold-light); font-weight: 700; }
+
+  .domain-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
+    margin: 16px 0;
+  }
+  .domain-opt {
+    background: var(--cream);
+    border: 1px solid var(--sand-dark);
+    border-radius: 8px;
+    padding: 16px;
+    text-align: center;
+  }
+  .domain-opt strong {
+    display: block;
+    color: var(--forest);
+    margin-bottom: 4px;
+  }
+  .domain-opt span {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+  }
+
+  .cta-box {
+    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+    color: var(--forest);
+    padding: 40px;
+    border-radius: 16px;
+    text-align: center;
+    margin: 32px 0 0;
+  }
+  .cta-box h3 {
+    color: var(--forest);
+    font-size: 1.8rem;
+    margin-bottom: 12px;
+  }
+  .cta-box p {
+    color: var(--forest);
+    font-size: 1.05rem;
+    margin-bottom: 20px;
+  }
+  .cta-link {
+    display: inline-block;
+    background: var(--forest);
+    color: var(--gold-light);
+    padding: 14px 32px;
+    border-radius: 100px;
+    text-decoration: none;
+    font-weight: 600;
+    margin: 4px;
+  }
+
+  .footer-doc {
+    background: var(--sand);
+    color: var(--text-muted);
+    text-align: center;
+    padding: 30px 60px;
+    font-size: 0.85rem;
+  }
+
+  @media print {
+    body { background: white; }
+    .page { box-shadow: none; max-width: 100%; }
+    .cta-link { display: none; }
+  }
+  @media (max-width: 600px) {
+    .cover { padding: 50px 30px; }
+    .cover h1 { font-size: 2rem; }
+    .content { padding: 40px 30px; }
+    .footer-doc { padding: 20px 30px; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- PORTADA -->
+  <header class="cover">
+    <div class="cover-eyebrow">Propuesta Comercial</div>
+    <h1>CasaCuento Hotel & Spa</h1>
+    <h2>Landing Page Web · Mantagua, Concón</h2>
+    <span class="cover-tagline">📍 V Región de Chile</span>
+  </header>
+
+  <div class="content">
+
+    <!-- 1. RESUMEN -->
+    <section>
+      <span class="section-num">1</span>
+      <h3>Resumen Ejecutivo</h3>
+      <p class="lead">
+        CasaCuento Hotel & Spa es un refugio boutique en Mantagua, Concón, que combina naturaleza, confort y
+        hospitalidad premium en la V Región. Esta propuesta presenta el desarrollo de una plataforma web
+        profesional que potencie su visibilidad, facilite el contacto directo con huéspedes y posicione a
+        CasaCuento como referente de turismo boutique en Chile.
+      </p>
+      <div class="highlight">
+        <strong>Resultado de esta propuesta:</strong> una landing page 100% funcional, responsive, optimizada
+        para celulares y lista para captar huéspedes desde el primer día. Visible en
+        <a href="https://casacuento.netlify.app" style="color: var(--forest); font-weight: 600;">casacuento.netlify.app</a>.
+      </div>
+    </section>
+
+    <!-- 2. PROBLEMÁTICA -->
+    <section>
+      <span class="section-num">2</span>
+      <h3>El Problema Actual</h3>
+      <p>Hoy, CasaCuento depende casi exclusivamente de Booking, Expedia y redes sociales para captar clientes. Esto genera:</p>
+      <ul>
+        <li><strong>Comisiones altas</strong> (15-20% por reserva en Booking/Expedia)</li>
+        <li><strong>Dependencia de terceros:</strong> sin web propia, el cliente no puede contactarte directo</li>
+        <li><strong>Percepción amateur:</strong> los huéspedes esperan una web profesional, no solo Instagram</li>
+        <li><strong>Pérdida de marca:</strong> tu identidad visual se diluye en plataformas genéricas</li>
+        <li><strong>Contacto lento:</strong> un cliente que no te encuentra rápido, se va a la competencia</li>
+      </ul>
+    </section>
+
+    <!-- 3. SOLUCIÓN -->
+    <section>
+      <span class="section-num">3</span>
+      <h3>La Solución: Web Profesional Propia</h3>
+      <p>Una landing page que:</p>
+      <div class="features-grid">
+        <div class="feature">
+          <div class="feature-icon">📱</div>
+          <div class="feature-title">100% Responsive</div>
+          <div class="feature-desc">Perfecta en celular, tablet y PC</div>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">⚡</div>
+          <div class="feature-title">Carga instantánea</div>
+          <div class="feature-desc">CDN global, &lt; 1 segundo</div>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">🔒</div>
+          <div class="feature-title">HTTPS Seguro</div>
+          <div class="feature-desc">Candadito verde, confianza</div>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">📲</div>
+          <div class="feature-title">WhatsApp directo</div>
+          <div class="feature-desc">Botón flotante siempre visible</div>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">🗺️</div>
+          <div class="feature-title">Google Maps</div>
+          <div class="feature-desc">Ubicación integrada</div>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">🎨</div>
+          <div class="feature-title">Diseño único</div>
+          <div class="feature-desc">Paleta verde bosque + dorado</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. INCLUYE -->
+    <section>
+      <span class="section-num">4</span>
+      <h3>Qué Incluye la Landing Page (Fase 1)</h3>
+      <ul>
+        <li>Header con logo, navegación suave y botón de contacto</li>
+        <li>Hero con foto panorámica del hotel y mensaje principal</li>
+        <li>Sección de 6 servicios con íconos personalizados (piscina, tinajas, áreas verdes, etc.)</li>
+        <li>Galería interactiva con 5 fotos reales y lightbox funcional</li>
+        <li>Sección de ubicación con Google Maps embebido</li>
+        <li>Footer con redes sociales (IG, FB, Booking, Expedia)</li>
+        <li>Botón flotante de WhatsApp con animación pulse</li>
+        <li>Optimización SEO para aparecer en Google</li>
+        <li>Accesibilidad WCAG AA (compatible con lectores de pantalla)</li>
+      </ul>
+    </section>
+
+    <!-- 5. ROADMAP -->
+    <section>
+      <span class="section-num">5</span>
+      <h3>Roadmap de Crecimiento</h3>
+      <div class="phases">
+        <div class="phase current">
+          <span class="phase-badge">Entregado</span>
+          <div class="phase-title">Fase 1</div>
+          <div class="phase-status">Landing publicitaria</div>
+          <ul class="phase-list">
+            <li>Hero, servicios, galería</li>
+            <li>WhatsApp + Maps</li>
+            <li>Responsive + SEO</li>
+            <li>5 fotos reales</li>
+            <li>Logo "Paz, Amor y Fuego"</li>
+          </ul>
+        </div>
+        <div class="phase">
+          <div class="phase-title">Fase 2</div>
+          <div class="phase-status">Reservas online</div>
+          <ul class="phase-list">
+            <li>Formulario de reserva</li>
+            <li>Calendario disponibilidad</li>
+            <li>Webpay / MercadoPago</li>
+            <li>Email confirmación auto</li>
+            <li>Sincronización Booking</li>
+          </ul>
+        </div>
+        <div class="phase">
+          <div class="phase-title">Fase 3</div>
+          <div class="phase-status">Engagement</div>
+          <ul class="phase-list">
+            <li>Chat en vivo</li>
+            <li>Reseñas Booking/Google</li>
+            <li>Galería de videos</li>
+            <li>Blog SEO</li>
+            <li>Multi-idioma</li>
+          </ul>
+        </div>
+        <div class="phase">
+          <div class="phase-title">Fase 4</div>
+          <div class="phase-status">Panel admin</div>
+          <ul class="phase-list">
+            <li>Dashboard propio</li>
+            <li>Gestión precios</li>
+            <li>Reportes de visitas</li>
+            <li>Email marketing</li>
+            <li>CRM clientes</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. INVERSIÓN -->
+    <section>
+      <span class="section-num">6</span>
+      <h3>Inversión y Costos</h3>
+      <div class="pricing">
+        <div class="pricing-title">💰 Estructura de Costos</div>
+        <div class="price-row">
+          <span class="label">Diseño + Desarrollo Landing (Fase 1)</span>
+          <span class="value">A convenir</span>
+        </div>
+        <div class="price-row">
+          <span class="label">Hosting Netlify (CDN global Amazon)</span>
+          <span class="value free">GRATIS</span>
+        </div>
+        <div class="price-row">
+          <span class="label">HTTPS / Certificado SSL</span>
+          <span class="value free">GRATIS</span>
+        </div>
+        <div class="price-row">
+          <span class="label">Mantenimiento mensual (opcional)</span>
+          <span class="value">A convenir</span>
+        </div>
+        <div class="price-row">
+          <span class="label">Dominio .cl (NIC Chile) - anual</span>
+          <span class="value">$9.990 CLP</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. DOMINIO -->
+    <section>
+      <span class="section-num">7</span>
+      <h3>Opciones de Dominio</h3>
+      <p>Hoy la web está en <strong>casacuento.netlify.app</strong>. Para uso comercial, se recomienda un dominio propio:</p>
+      <div class="domain-options">
+        <div class="domain-opt">
+          <strong>casacuento.cl</strong>
+          <span>$9.990 CLP/año · Recomendado</span>
+        </div>
+        <div class="domain-opt">
+          <strong>casacuentohotel.cl</strong>
+          <span>$9.990 CLP/año</span>
+        </div>
+        <div class="domain-opt">
+          <strong>casacuento.com</strong>
+          <span>$12-15 USD/año</span>
+        </div>
+        <div class="domain-opt">
+          <strong>casacuentohotel.com</strong>
+          <span>$12-15 USD/año</span>
+        </div>
+      </div>
+      <p class="lead" style="margin-top: 16px;">La conexión de dominio a Netlify toma 10 minutos y se hace una sola vez.</p>
+    </section>
+
+    <!-- 8. CIERRE -->
+    <section>
+      <span class="section-num">8</span>
+      <h3>Próximos Pasos</h3>
+      <ol style="margin-left: 24px;">
+        <li><strong>Hoy:</strong> Revisar la landing en vivo y dar feedback</li>
+        <li><strong>24-48h:</strong> Ajustes finales según comentarios</li>
+        <li><strong>Esta semana:</strong> Decisión de dominio (.cl recomendado)</li>
+        <li><strong>Próxima semana:</strong> Inicio de Fase 2 (reservas online)</li>
+        <li><strong>2-3 semanas:</strong> Web completa con sistema de reservas</li>
+      </ol>
+
+      <div class="cta-box">
+        <h3>¿Listo para ver la propuesta en vivo?</h3>
+        <p>Abre este link en tu celular o computador y recorre la landing page completa.</p>
+        <a href="https://casacuento.netlify.app" class="cta-link">🌐 Ver sitio en vivo</a>
+        <a href="https://wa.me/56991924089" class="cta-link">📲 WhatsApp Alexis</a>
+      </div>
+    </section>
+
+  </div>
+
+  <footer class="footer-doc">
+    <p><strong>CasaCuento Hotel & Spa</strong> · Mantagua, Concón · V Región, Chile</p>
+    <p style="margin-top: 8px;">© 2026 · Propuesta elaborada por Heidrium Aguirre · Todos los derechos reservados</p>
+  </footer>
+
+</div>
+</body>
+</html>

@@ -45,6 +45,12 @@ Landing page moderna, elegante y 100% responsive (mobile-first) construida en un
 │   ├── galeria-habitacion.jpg       # Galería: habitación boutique
 │   ├── galeria-interior-chimenea.jpg # Galería: comedor rústico
 │   └── galeria-techo.jpg            # Galería: arquitectura interior
+├── Propuesta Cliente/               # Materiales para presentar a Alexis
+│   ├── README.md                    # Índice de esta carpeta
+│   ├── Propuesta_Comercial_CasaCuento.html  # Propuesta visual profesional
+│   ├── Checklist_Feedback_Alexis.html       # Formulario interactivo
+│   ├── Guia_Presentacion_Alexis.md          # Script de presentación
+│   └── Guia_Dominio_Costos_Roadmap.md       # Info técnica
 ├── README.md
 └── .gitignore
 ```
