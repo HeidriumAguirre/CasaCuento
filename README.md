@@ -3,6 +3,7 @@
 Sitio web promocional oficial del Hotel Boutique CasaCuento, ubicado en Mantagua, Concón, V Región, Chile.
 
 🌐 **Sitio en vivo:** [https://casacuento.netlify.app](https://casacuento.netlify.app)
+📦 **Repositorio:** [github.com/HeidriumAguirre/CasaCuento](https://github.com/HeidriumAguirre/CasaCuento)
 
 ---
 
