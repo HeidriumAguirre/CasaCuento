@@ -1,597 +1,126 @@
 <!DOCTYPE html>
-
 <html lang="es-CL">
-
 <head>
-
 <meta charset="UTF-8" />
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-<meta name="description" content="Cabañas en CasaCuento Hotel & Spa - Reservas por WhatsApp." />
-
+<meta name="description" content="Cabañas en CasaCuento Hotel & Spa. Rodeadas de bosque nativo." />
 <meta name="theme-color" content="#2E4A3E" />
-
 <title>Cabañas · CasaCuento Hotel & Spa</title>
-
-
-
 <link rel="icon" type="image/png" href="Fotos CasaCuento/Logo.jpg" />
-
 <link rel="preconnect" href="https://fonts.googleapis.com" />
-
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
-
-
-
-<link rel="stylesheet" href="alojamientos.css" />
-
-<style>
-
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-  body {
-
-    font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-
-    font-size: 16px; line-height: 1.6;
-
-    color: #2D2D2D; background: #FAF8F5;
-
-  }
-
-  .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
-
-  .section { padding: 60px 24px; }
-
-  .section-eyebrow {
-
-    display: inline-block; font-size: 0.8125rem; font-weight: 600;
-
-    color: #C9A962; text-transform: uppercase; letter-spacing: 2px;
-
-    margin-bottom: 16px;
-
-  }
-
-  /* Dropdown thumbnail del form */
-
-  .alojamiento-thumb {
-
-    width: 60px; height: 60px;
-
-    border-radius: 8px;
-
-    border: 2px solid #FFFFFF;
-
-    cursor: pointer;
-
-    object-fit: cover;
-
-    flex-shrink: 0;
-
-    opacity: 0.7;
-
-    transition: all 0.2s;
-
-  }
-
-  .alojamiento-thumb.active, .alojamiento-thumb:hover { opacity: 1; transform: scale(1.05); }
-
-</style>
-
+<link rel="stylesheet" href="css/styles.css" />
+<script src="js/includes.js" defer></script>
+<script src="js/app.js" defer></script>
 </head>
-
 <body>
 
+<a href="#inicio" class="skip-link">Saltar al contenido principal</a>
+<div data-include="partials/header.html"></div>
 
+<main id="inicio">
+  <section class="alojamiento-hero">
+    <span class="section-eyebrow">— Cabañas —</span>
+    <h1>Cabañas</h1>
+    <p>Cabañas en CasaCuento Hotel & Spa. Rodeadas de bosque nativo.</p>
+  </section>
 
-  <header class="header" id="header">
+  <section class="section" style="padding-top: 40px;">
+    <div class="container" style="max-width: 1100px;">
 
-    <div class="container">
-
-      <nav class="nav" aria-label="Navegación principal">
-
-        <a href="#inicio" class="logo logo-image" aria-label="Refugio CasaCuento - Inicio">
-
-          <img src="Fotos CasaCuento/Logo.jpg" alt="CasaCuento" style="height: 40px; width: auto;" />
-
-        </a>
-
-
-
-        <div class="nav-menu" id="navMenu">
-
-          <ul class="nav-list">
-
-            <li><a href="#inicio" class="nav-link">Inicio</a></li>
-
-            <li class="nav-dropdown">
-
-              <button class="nav-link nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
-
-                Habitaciones y Tarifas
-
-                <svg class="caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
-
-              </button>
-
-              <ul class="nav-dropdown-menu">
-
-                <li><a href="habitaciones.html">Habitaciones</a></li>
-
-                <li><a href="lofts.html">Lofts</a></li>
-
-                <li><a href="suites.html">Suites</a></li>
-
-                <li><a href="cabanas.html">Cabañas</a></li>
-
-              </ul>
-
-            </li>
-
-            <li><a href="#servicios" class="nav-link">Servicios y Eventos</a></li>
-
-            <li><a href="#galeria" class="nav-link">Galería</a></li>
-
-            <li><a href="testimonios.html" class="nav-link">Testimonios</a></li>
-
-            <li><a href="contacto.html" class="nav-link">Contacto</a></li>
-
-            <li><a href="#ubicacion" class="nav-link">Ubicación</a></li>
-
-          </ul>
-
-          <div class="nav-cta">
-
-            <a href="https://wa.me/56991924089?text=Hola%20CasaCuento%2C%20me%20interesa%20reservar" class="btn btn-primary" target="_blank" rel="noopener">
-
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-
-              Contactar
-
-            </a>
-
-          </div>
-
-        </div>
-
-
-
-        <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navMenu">
-
-          <span></span><span></span><span></span>
-
-        </button>
-
-      </nav>
-
-    </div>
-
-  </header>
-
-
-
-<section class="alojamiento-hero">
-
-  <span class="section-eyebrow">— Cabañas —</span>
-
-  <h1>Cabañas</h1>
-
-  <p>Rodeadas de bosque nativo, perfectas para quienes buscan privacidad.</p>
-
-</section>
-
-
-
-<section class="section">
-
-  <div class="container" style="max-width: 1100px;">
-
-
-
-    <article class="alojamiento-card">
-
+      <article class="alojamiento-card">
         <div class="alojamiento-card-grid">
-
           <div class="alojamiento-gallery">
-
             <img class="alojamiento-gallery-main" src="fotos-web/cabana-aymar/img-01.webp" alt="AyMar" />
-
-            <div class="alojamiento-thumbs"><img class="alojamiento-thumb active" src="fotos-web/cabana-aymar/img-01.webp" data-src="fotos-web/cabana-aymar/img-01.webp" alt="AyMar 1" /><img class="alojamiento-thumb" src="fotos-web/cabana-aymar/img-02.webp" data-src="fotos-web/cabana-aymar/img-02.webp" alt="AyMar 2" /><img class="alojamiento-thumb" src="fotos-web/cabana-aymar/img-03.webp" data-src="fotos-web/cabana-aymar/img-03.webp" alt="AyMar 3" /></div>
-
+            <img class="alojamiento-thumb" src="fotos-web/cabana-aymar/img-02.webp" data-src="fotos-web/cabana-aymar/img-02.webp" alt="AyMar 2" /><img class="alojamiento-thumb" src="fotos-web/cabana-aymar/img-03.webp" data-src="fotos-web/cabana-aymar/img-03.webp" alt="AyMar 3" /><img class="alojamiento-thumb" src="fotos-web/cabana-aymar/img-04.webp" data-src="fotos-web/cabana-aymar/img-04.webp" alt="AyMar 4" />
           </div>
-
           <div class="alojamiento-body">
-
             <span class="alojamiento-tipo">Cabaña</span>
-
             <h2 class="alojamiento-nombre">AyMar</h2>
-
             <p class="alojamiento-descripcion">Cabaña que combina la calidez del mar con la paz del bosque. Diseño acogedor, ideal para parejas o estadías cortas.</p>
-
             <div class="alojamiento-detalles">
-
-              <div class="alojamiento-detalle">
-
-                <div class="alojamiento-detalle-icon">
-
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4v16M22 4v16M2 8h20M2 16h20M6 12h12"/></svg>
-
-                </div>
-
-                <div class="alojamiento-detalle-label">Camas</div>
-
-                <div class="alojamiento-detalle-valor">1 Queen</div>
-
-              </div>
-
-              <div class="alojamiento-detalle">
-
-                <div class="alojamiento-detalle-icon">
-
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
-
-                </div>
-
-                <div class="alojamiento-detalle-label">Capacidad</div>
-
-                <div class="alojamiento-detalle-valor">2 personas</div>
-
-              </div>
-
-              <div class="alojamiento-detalle">
-
-                <div class="alojamiento-detalle-icon">
-
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
-
-                </div>
-
-                <div class="alojamiento-detalle-label">Desde</div>
-
-                <div class="alojamiento-detalle-valor">$ XX.XXX / noche</div>
-
-              </div>
-
+              <div class="alojamiento-detalle"><div class="alojamiento-detalle-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4v16M22 4v16M2 8h20M2 16h20M6 12h12"/></svg></div><div class="alojamiento-detalle-label">Camas</div><div class="alojamiento-detalle-valor">1 Queen</div></div>
+              <div class="alojamiento-detalle"><div class="alojamiento-detalle-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div><div class="alojamiento-detalle-label">Capacidad</div><div class="alojamiento-detalle-valor">2 personas</div></div>
+              <div class="alojamiento-detalle"><div class="alojamiento-detalle-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div><div class="alojamiento-detalle-label">Desde</div><div class="alojamiento-detalle-valor">$ XX.XXX / noche</div></div>
             </div>
-
-
-
             <div class="datos-bancarios-box">
-
               <h4>💳 Datos para transferencia</h4>
-
               <div class="datos-bancarios-dato"><strong>Nombre:</strong> <span>-</span></div>
-
               <div class="datos-bancarios-dato"><strong>RUT:</strong> <span>-</span></div>
-
               <div class="datos-bancarios-dato"><strong>Banco:</strong> <span>-</span></div>
-
               <div class="datos-bancarios-dato"><strong>Tipo de cuenta:</strong> <span>-</span></div>
-
               <div class="datos-bancarios-dato"><strong>N° de cuenta:</strong> <span>-</span></div>
-
               <div class="datos-bancarios-dato"><strong>Email confirmación:</strong> <span>refugiocasacuento@gmail.com</span></div>
-
               <p class="datos-bancarios-nota">Los datos definitivos se confirmarán con Alexis al momento de definir los precios.</p>
-
             </div>
-
-
-
             <form class="alojamiento-form" data-alojamiento-form data-alojamiento="Cabaña AyMar">
-
               <h3 class="alojamiento-form-title">Consultar disponibilidad</h3>
-
               <div class="form-row">
-
-                <div class="form-group">
-
-                  <label for="cabana-aymar-entrada">Entrada</label>
-
-                  <input type="date" name="fechaEntrada" id="cabana-aymar-entrada" required />
-
-                </div>
-
-                <div class="form-group">
-
-                  <label for="cabana-aymar-salida">Salida</label>
-
-                  <input type="date" name="fechaSalida" id="cabana-aymar-salida" required />
-
-                </div>
-
+                <div class="form-group"><label for="cabana-aymar-entrada">Entrada</label><input type="date" name="fechaEntrada" id="cabana-aymar-entrada" required /></div>
+                <div class="form-group"><label for="cabana-aymar-salida">Salida</label><input type="date" name="fechaSalida" id="cabana-aymar-salida" required /></div>
               </div>
-
-              <div class="form-group">
-
-                <label for="cabana-aymar-personas">Personas</label>
-
-                <input type="number" name="personas" id="cabana-aymar-personas" min="1" value="2" required />
-
-              </div>
-
+              <div class="form-group"><label for="cabana-aymar-personas">Personas</label><input type="number" name="personas" id="cabana-aymar-personas" min="1" value="2" required /></div>
               <div class="alojamiento-form-acciones">
-
-                <button type="submit" class="btn btn-primary">Consultar por WhatsApp</button>
-
-                <a href="https://www.booking.com/hotel/cl/casa-cuento.es.html" target="_blank" rel="noopener" class="btn btn-bosque">Ver en Booking</a>
-
+                <button type="submit" class="btn-2 btn-2-primary">Consultar por WhatsApp</button>
+                <a href="https://www.booking.com/hotel/cl/casa-cuento.es.html" target="_blank" rel="noopener" class="btn-2 btn-2-bosque">Ver en Booking</a>
               </div>
-
             </form>
-
           </div>
-
         </div>
-
       </article>
-
-
-
-    <article class="alojamiento-card">
-
+      <article class="alojamiento-card">
         <div class="alojamiento-card-grid">
-
           <div class="alojamiento-gallery">
-
             <img class="alojamiento-gallery-main" src="fotos-web/cabana-poetadeltiempo/img-01.webp" alt="PoetaDelTiempo" />
-
-            <div class="alojamiento-thumbs"><img class="alojamiento-thumb active" src="fotos-web/cabana-poetadeltiempo/img-01.webp" data-src="fotos-web/cabana-poetadeltiempo/img-01.webp" alt="PoetaDelTiempo 1" /><img class="alojamiento-thumb" src="fotos-web/cabana-poetadeltiempo/img-02.webp" data-src="fotos-web/cabana-poetadeltiempo/img-02.webp" alt="PoetaDelTiempo 2" /><img class="alojamiento-thumb" src="fotos-web/cabana-poetadeltiempo/img-03.webp" data-src="fotos-web/cabana-poetadeltiempo/img-03.webp" alt="PoetaDelTiempo 3" /><img class="alojamiento-thumb" src="fotos-web/cabana-poetadeltiempo/img-04.webp" data-src="fotos-web/cabana-poetadeltiempo/img-04.webp" alt="PoetaDelTiempo 4" /></div>
-
+            <img class="alojamiento-thumb" src="fotos-web/cabana-poetadeltiempo/img-02.webp" data-src="fotos-web/cabana-poetadeltiempo/img-02.webp" alt="PoetaDelTiempo 2" /><img class="alojamiento-thumb" src="fotos-web/cabana-poetadeltiempo/img-03.webp" data-src="fotos-web/cabana-poetadeltiempo/img-03.webp" alt="PoetaDelTiempo 3" /><img class="alojamiento-thumb" src="fotos-web/cabana-poetadeltiempo/img-04.webp" data-src="fotos-web/cabana-poetadeltiempo/img-04.webp" alt="PoetaDelTiempo 4" /><img class="alojamiento-thumb" src="fotos-web/cabana-poetadeltiempo/img-05.webp" data-src="fotos-web/cabana-poetadeltiempo/img-05.webp" alt="PoetaDelTiempo 5" />
           </div>
-
           <div class="alojamiento-body">
-
             <span class="alojamiento-tipo">Cabaña</span>
-
             <h2 class="alojamiento-nombre">PoetaDelTiempo</h2>
-
             <p class="alojamiento-descripcion">Cabaña espaciosa, la más versátil del lugar. Múltiples ambientes, ideal para familias grandes o estadías largas rodeadas de bosque.</p>
-
             <div class="alojamiento-detalles">
-
-              <div class="alojamiento-detalle">
-
-                <div class="alojamiento-detalle-icon">
-
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4v16M22 4v16M2 8h20M2 16h20M6 12h12"/></svg>
-
-                </div>
-
-                <div class="alojamiento-detalle-label">Camas</div>
-
-                <div class="alojamiento-detalle-valor">3 (King + Queen + Single)</div>
-
-              </div>
-
-              <div class="alojamiento-detalle">
-
-                <div class="alojamiento-detalle-icon">
-
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
-
-                </div>
-
-                <div class="alojamiento-detalle-label">Capacidad</div>
-
-                <div class="alojamiento-detalle-valor">5-6 personas</div>
-
-              </div>
-
-              <div class="alojamiento-detalle">
-
-                <div class="alojamiento-detalle-icon">
-
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
-
-                </div>
-
-                <div class="alojamiento-detalle-label">Desde</div>
-
-                <div class="alojamiento-detalle-valor">$ XX.XXX / noche</div>
-
-              </div>
-
+              <div class="alojamiento-detalle"><div class="alojamiento-detalle-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4v16M22 4v16M2 8h20M2 16h20M6 12h12"/></svg></div><div class="alojamiento-detalle-label">Camas</div><div class="alojamiento-detalle-valor">3 (King + Queen + Single)</div></div>
+              <div class="alojamiento-detalle"><div class="alojamiento-detalle-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div><div class="alojamiento-detalle-label">Capacidad</div><div class="alojamiento-detalle-valor">5-6 personas</div></div>
+              <div class="alojamiento-detalle"><div class="alojamiento-detalle-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div><div class="alojamiento-detalle-label">Desde</div><div class="alojamiento-detalle-valor">$ XX.XXX / noche</div></div>
             </div>
-
-
-
             <div class="datos-bancarios-box">
-
               <h4>💳 Datos para transferencia</h4>
-
               <div class="datos-bancarios-dato"><strong>Nombre:</strong> <span>-</span></div>
-
               <div class="datos-bancarios-dato"><strong>RUT:</strong> <span>-</span></div>
-
               <div class="datos-bancarios-dato"><strong>Banco:</strong> <span>-</span></div>
-
               <div class="datos-bancarios-dato"><strong>Tipo de cuenta:</strong> <span>-</span></div>
-
               <div class="datos-bancarios-dato"><strong>N° de cuenta:</strong> <span>-</span></div>
-
               <div class="datos-bancarios-dato"><strong>Email confirmación:</strong> <span>refugiocasacuento@gmail.com</span></div>
-
               <p class="datos-bancarios-nota">Los datos definitivos se confirmarán con Alexis al momento de definir los precios.</p>
-
             </div>
-
-
-
             <form class="alojamiento-form" data-alojamiento-form data-alojamiento="Cabaña PoetaDelTiempo">
-
               <h3 class="alojamiento-form-title">Consultar disponibilidad</h3>
-
               <div class="form-row">
-
-                <div class="form-group">
-
-                  <label for="cabana-poetadeltiempo-entrada">Entrada</label>
-
-                  <input type="date" name="fechaEntrada" id="cabana-poetadeltiempo-entrada" required />
-
-                </div>
-
-                <div class="form-group">
-
-                  <label for="cabana-poetadeltiempo-salida">Salida</label>
-
-                  <input type="date" name="fechaSalida" id="cabana-poetadeltiempo-salida" required />
-
-                </div>
-
+                <div class="form-group"><label for="cabana-poetadeltiempo-entrada">Entrada</label><input type="date" name="fechaEntrada" id="cabana-poetadeltiempo-entrada" required /></div>
+                <div class="form-group"><label for="cabana-poetadeltiempo-salida">Salida</label><input type="date" name="fechaSalida" id="cabana-poetadeltiempo-salida" required /></div>
               </div>
-
-              <div class="form-group">
-
-                <label for="cabana-poetadeltiempo-personas">Personas</label>
-
-                <input type="number" name="personas" id="cabana-poetadeltiempo-personas" min="1" value="2" required />
-
-              </div>
-
+              <div class="form-group"><label for="cabana-poetadeltiempo-personas">Personas</label><input type="number" name="personas" id="cabana-poetadeltiempo-personas" min="1" value="2" required /></div>
               <div class="alojamiento-form-acciones">
-
-                <button type="submit" class="btn btn-primary">Consultar por WhatsApp</button>
-
-                <a href="https://www.booking.com/hotel/cl/casa-cuento.es.html" target="_blank" rel="noopener" class="btn btn-bosque">Ver en Booking</a>
-
+                <button type="submit" class="btn-2 btn-2-primary">Consultar por WhatsApp</button>
+                <a href="https://www.booking.com/hotel/cl/casa-cuento.es.html" target="_blank" rel="noopener" class="btn-2 btn-2-bosque">Ver en Booking</a>
               </div>
-
             </form>
-
           </div>
-
         </div>
-
       </article>
-
-
-
-  </div>
-
-</section>
-
-
-
-  <footer class="footer">
-
-    <div class="container">
-
-      <div class="footer-grid">
-
-        <div class="footer-brand">
-
-          <a href="#inicio" class="logo logo-image footer-logo">
-
-            <img src="Fotos CasaCuento/Logo.jpg" alt="CasaCuento" style="height: 60px; width: auto;" />
-
-          </a>
-
-          <p>Tu refugio de descanso entre el mar y la naturaleza en la V Región de Chile.</p>
-
-          <div class="footer-social">
-
-            <a href="https://www.instagram.com/casacuentoficial/" target="_blank" rel="noopener" aria-label="Instagram">
-
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-
-            </a>
-
-            <a href="https://www.facebook.com/casacuentohotel" target="_blank" rel="noopener" aria-label="Facebook">
-
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg>
-
-            </a>
-
-            <a href="https://www.booking.com/hotel/cl/casa-cuento.es.html" target="_blank" rel="noopener" aria-label="Booking.com">
-
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V8l9-5 9 5v13M9 21v-7h6v7M3 21h18"/></svg>
-
-            </a>
-
-            <a href="https://www.expedia.com/es/Vina-Del-Mar-Hoteles-Casa-Cuento.h16264146.Informacion-Hotel" target="_blank" rel="noopener" aria-label="Expedia">
-
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
-
-            </a>
-
-          </div>
-
-        </div>
-
-
-
-        <div class="footer-col">
-
-          <h4>Navegación</h4>
-
-          <ul>
-
-            <li><a href="#inicio">Inicio</a></li>
-
-            <li><a href="#servicios">Servicios</a></li>
-
-            <li><a href="#galeria">Galería</a></li>
-
-            <li><a href="#ubicacion">Ubicación</a></li>
-
-          </ul>
-
-        </div>
-
-
-
-        <div class="footer-col">
-
-          <h4>Contacto</h4>
-
-          <ul>
-
-            <li><a href="https://wa.me/56991924089" target="_blank" rel="noopener">WhatsApp</a></li>
-
-            <li><a href="https://www.instagram.com/casacuentoficial/" target="_blank" rel="noopener">Instagram</a></li>
-
-            <li><a href="https://www.facebook.com/casacuentohotel" target="_blank" rel="noopener">Facebook</a></li>
-
-          </ul>
-
-        </div>
-
-
-
-        <div class="footer-col">
-
-          <h4>Reservas</h4>
-
-          <ul>
-
-            <li><a href="https://www.booking.com/hotel/cl/casa-cuento.es.html" target="_blank" rel="noopener">Booking.com</a></li>
-
-            <li><a href="https://www.expedia.com/es/Vina-Del-Mar-Hoteles-Casa-Cuento.h16264146.Informacion-Hotel" target="_blank" rel="noopener">Expedia</a></li>
-
-          </ul>
-
-        </div>
-
-      </div>
-
-      <div class="footer-bottom">
-
-        <p>Â© <span id="year"></span> CasaCuento Hotel & Spa Â· Concón / Mantagua, Chile Â· Todos los derechos reservados</p>
-
-      </div>
 
     </div>
+  </section>
+</main>
 
-  </footer>
+<div data-include="partials/footer.html"></div>
+<div data-include="partials/chatbot.html"></div>
 
-
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Imagen ampliada">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Cerrar">✕</button>
+  <img id="lightboxImg" src="" alt="" />
+</div>
 
 </body>
-
 </html>

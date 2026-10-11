@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Galería completa de CasaCuento Hotel & Spa." />
+<meta name="theme-color" content="#2E4A3E" />
+<title>Galería · CasaCuento Hotel & Spa</title>
+<link rel="icon" type="image/png" href="Fotos CasaCuento/Logo.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/styles.css" />
+<script src="js/includes.js" defer></script>
+<script src="js/app.js" defer></script>
+</head>
+<body>
+
+<a href="#inicio" class="skip-link">Saltar al contenido principal</a>
+<div data-include="partials/header.html"></div>
+
+<main id="inicio">
+  <section class="alojamiento-hero">
+    <span class="section-eyebrow">— Galería —</span>
+    <h1>Galería</h1>
+    <p>Un recorrido visual por cada rincón de CasaCuento.</p>
+  </section>
+
+  <section class="section gallery" style="padding-top: 40px;">
+    <div class="container">
+      <div class="gallery-grid" id="galleryGrid"></div>
+    </div>
+  </section>
+
+  <script>
+  (function() {
+    const fotos = ['galeria-01','galeria-02','galeria-03','galeria-04','galeria-05','galeria-06','galeria-07','galeria-08','galeria-09','galeria-10','galeria-11'];
+    const captions = ['Piscina y descanso','Habitación boutique','Loft moderno','Suite con vista','Cabaña rodeada de bosque','Naturaleza nativa','Jardín interior','Atardecer','Detalle arquitectónico','Cocina equipada','Terraza'];
+    const grid = document.getElementById('galleryGrid');
+    if (grid) {
+      fotos.forEach((f, i) => {
+        const fig = document.createElement('figure');
+        fig.className = 'galeria-item';
+        fig.dataset.caption = captions[i] || f;
+        fig.innerHTML = `<img src="fotos-web/galeria/${f}.webp" alt="${captions[i] || f}" loading="lazy" /><div class="gallery-overlay"><figcaption class="gallery-caption">${captions[i] || f}</figcaption></div>`;
+        grid.appendChild(fig);
+      });
+    }
+  })();
+  </script>
+</main>
+
+<div data-include="partials/footer.html"></div>
+<div data-include="partials/chatbot.html"></div>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Imagen ampliada">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Cerrar">✕</button>
+  <img id="lightboxImg" src="" alt="" />
+</div>
+
+</body>
+</html>
