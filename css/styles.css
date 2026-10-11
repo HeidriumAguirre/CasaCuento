@@ -863,7 +863,7 @@ h1, h2, h3, h4, h5, h6 { font-weight: 600; line-height: 1.2; }
   border: 1px solid var(--color-sand-dark);
   border-radius: var(--radius-md);
   overflow: hidden;
-  margin-bottom: 24px;
+  margin-bottom: 32px;
   box-shadow: var(--shadow-sm);
   transition: box-shadow var(--transition-base);
 }
@@ -872,20 +872,18 @@ h1, h2, h3, h4, h5, h6 { font-weight: 600; line-height: 1.2; }
   display: grid;
   grid-template-columns: 1fr;
 }
-@media (min-width: 900px) { .alojamiento-card-grid { grid-template-columns: 0.85fr 1.15fr; } }
+@media (min-width: 900px) { .alojamiento-card-grid { grid-template-columns: 1fr 1fr; } }
 
 .alojamiento-gallery {
   position: relative;
   background: var(--color-forest-dark);
-  min-height: 240px;
-  max-height: 320px;
+  min-height: 320px;
   overflow: hidden;
 }
 .alojamiento-gallery-main {
   width: 100%; height: 100%;
   object-fit: cover;
   display: block;
-  min-height: 240px;
 }
 .alojamiento-thumbs {
   position: absolute; bottom: 10px; left: 10px; right: 10px;
