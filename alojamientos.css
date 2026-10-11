@@ -1,0 +1,285 @@
+/* ============================================
+   ALOJAMIENTOS - Estilo Normal (limpio)
+   ============================================ */
+
+/* Hero de la página de alojamientos */
+.alojamiento-hero {
+  position: relative;
+  padding: 140px 24px 60px;
+  text-align: center;
+  background: linear-gradient(135deg, #2E4A3E 0%, #1F3329 100%);
+  color: #FAF8F5;
+}
+.alojamiento-hero h1 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(1.875rem, 4vw, 3rem);
+  margin: 0 0 12px;
+  font-weight: 600;
+}
+.alojamiento-hero p {
+  font-size: 1.0625rem;
+  opacity: 0.9;
+  max-width: 600px; margin: 0 auto;
+  font-family: 'DM Sans', sans-serif;
+}
+.section-eyebrow {
+  display: inline-block;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.8125rem; font-weight: 600;
+  color: #C9A962; text-transform: uppercase; letter-spacing: 2px;
+  margin-bottom: 16px;
+}
+
+/* Card de alojamiento */
+.alojamiento-card {
+  background: #FFFFFF;
+  border: 1px solid #E8DFD4;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 32px;
+  box-shadow: 0 6px 24px rgba(46, 74, 62, 0.12);
+  transition: box-shadow 0.3s;
+}
+.alojamiento-card:hover { box-shadow: 0 12px 40px rgba(46, 74, 62, 0.18); }
+.alojamiento-card-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 900px) { .alojamiento-card-grid { grid-template-columns: 1fr 1fr; } }
+
+.alojamiento-gallery {
+  position: relative;
+  background: #E8DFD4;
+  min-height: 360px;
+  overflow: hidden;
+}
+.alojamiento-gallery-main {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s;
+}
+.alojamiento-gallery:hover .alojamiento-gallery-main { transform: scale(1.05); }
+.alojamiento-thumbs {
+  position: absolute; bottom: 12px; left: 12px; right: 12px;
+  display: flex; gap: 8px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.alojamiento-thumbs::-webkit-scrollbar { display: none; }
+.alojamiento-thumb {
+  width: 60px; height: 60px;
+  border-radius: 8px;
+  border: 2px solid #FFFFFF;
+  cursor: pointer;
+  object-fit: cover;
+  flex-shrink: 0;
+  opacity: 0.7;
+  transition: all 0.2s;
+}
+.alojamiento-thumb.active, .alojamiento-thumb:hover { opacity: 1; transform: scale(1.05); }
+
+.alojamiento-body { padding: 32px; }
+.alojamiento-tipo {
+  display: inline-block;
+  padding: 4px 14px;
+  background: #F5F0E8;
+  color: #2E4A3E;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 12px;
+}
+.alojamiento-nombre {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(1.5rem, 3vw, 1.875rem);
+  color: #2E4A3E;
+  margin: 0 0 12px;
+  font-weight: 600;
+}
+.alojamiento-descripcion {
+  color: #2D2D2D;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.9375rem;
+}
+
+/* Detalles del alojamiento */
+.alojamiento-detalles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  gap: 12px;
+  margin-bottom: 24px;
+  padding: 16px;
+  background: #F5F0E8;
+  border-radius: 12px;
+}
+.alojamiento-detalle { text-align: center; }
+.alojamiento-detalle-icon {
+  width: 32px; height: 32px;
+  margin: 0 auto 4px;
+  color: #2E4A3E;
+}
+.alojamiento-detalle-icon svg { width: 100%; height: 100%; }
+.alojamiento-detalle-label {
+  font-size: 0.7rem;
+  color: #6B6B6B;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 2px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 600;
+}
+.alojamiento-detalle-valor {
+  font-size: 0.9375rem;
+  color: #2E4A3E;
+  font-weight: 600;
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* Form de reserva */
+.alojamiento-form {
+  background: #F5F0E8;
+  border-radius: 12px;
+  padding: 24px;
+  margin-top: 20px;
+  border: 1px solid #E8DFD4;
+}
+.alojamiento-form-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.1rem;
+  color: #2E4A3E;
+  margin: 0 0 16px;
+  text-align: center;
+  font-weight: 600;
+}
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+@media (max-width: 500px) { .form-row { grid-template-columns: 1fr; } }
+.form-group { display: flex; flex-direction: column; }
+.form-group label {
+  font-size: 0.8125rem; color: #6B6B6B;
+  margin-bottom: 4px; font-weight: 600;
+  font-family: 'DM Sans', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.form-group input, .form-group select {
+  padding: 10px 12px;
+  border: 1px solid #E8DFD4;
+  border-radius: 8px;
+  background: #FFFFFF;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.9375rem;
+  color: #2D2D2D;
+  transition: all 0.2s;
+}
+.form-group input:focus, .form-group select:focus {
+  border-color: #C9A962;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(201, 169, 98, 0.2);
+}
+.alojamiento-form-acciones {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+.alojamiento-form-acciones .btn { flex: 1; min-width: 160px; }
+
+/* Botones con la estética normal */
+.alojamiento-form .btn-primary {
+  background: #C9A962;
+  color: #FAF8F5;
+  padding: 14px 28px;
+  border-radius: 999px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 8px 32px rgba(201, 169, 98, 0.25);
+}
+.alojamiento-form .btn-primary:hover {
+  background: #D4B87A;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 36px rgba(201, 169, 98, 0.35);
+}
+.alojamiento-form .btn-bosque {
+  background: transparent;
+  color: #2E4A3E;
+  padding: 14px 28px;
+  border-radius: 999px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #2E4A3E;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.alojamiento-form .btn-bosque:hover {
+  background: #2E4A3E;
+  color: #FAF8F5;
+}
+
+/* Datos bancarios */
+.datos-bancarios-box {
+  background: #F5F0E8;
+  border-left: 4px solid #C9A962;
+  border-radius: 8px;
+  padding: 20px 24px;
+  margin: 24px 0;
+  border: 1px solid #E8DFD4;
+  border-left-width: 4px;
+}
+.datos-bancarios-box h4 {
+  color: #2E4A3E;
+  margin: 0 0 12px;
+  font-size: 1.05rem;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 600;
+}
+.datos-bancarios-dato {
+  display: flex; justify-content: space-between;
+  padding: 4px 0;
+  border-bottom: 1px dashed rgba(107, 107, 107, 0.2);
+  font-size: 0.9375rem;
+  font-family: 'DM Sans', sans-serif;
+}
+.datos-bancarios-dato:last-child { border-bottom: none; }
+.datos-bancarios-dato strong {
+  color: #2E4A3E;
+  font-family: 'DM Sans', sans-serif;
+  text-transform: uppercase;
+  font-size: 0.8125rem;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+.datos-bancarios-dato span { color: #6B6B6B; font-family: 'Courier New', monospace; }
+.datos-bancarios-nota {
+  font-size: 0.8125rem; color: #6B6B6B;
+  margin-top: 12px; font-style: italic;
+  font-family: 'DM Sans', sans-serif;
+}
+
+@media (max-width: 600px) {
+  .alojamiento-body { padding: 24px 20px; }
+  .alojamiento-hero { padding: 120px 24px 50px; }
+}

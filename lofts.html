@@ -3,41 +3,197 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="Lofts - CasaCuento Hotel & Spa" />
+<meta name="description" content="Lofts en CasaCuento Hotel & Spa - Reservas por WhatsApp." />
 <meta name="theme-color" content="#2E4A3E" />
 <title>Lofts · CasaCuento Hotel & Spa</title>
+
 <link rel="icon" type="image/png" href="Fotos CasaCuento/Logo.jpg" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="alojamientos.css" />
 <style>
-  body { font-family: 'DM Sans', -apple-system, sans-serif; margin: 0; background: #FAF8F5; color: #2D2D2D; }
-  .ph-hero { padding: 160px 24px 80px; text-align: center; background: linear-gradient(135deg, #2E4A3E 0%, #1F3329 100%); color: #FAF8F5; }
-  .ph-hero h1 { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(2rem, 5vw, 3.5rem); margin: 0 0 16px; }
-  .ph-hero p { font-size: 1.0625rem; opacity: 0.9; max-width: 600px; margin: 0 auto; }
-  .ph-section { padding: 80px 24px; max-width: 800px; margin: 0 auto; text-align: center; }
-  .ph-section p { font-size: 1.0625rem; line-height: 1.8; color: #6B6B6B; margin-bottom: 24px; }
-  .ph-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
-  .ph-btn { display: inline-flex; align-items: center; gap: 8px; padding: 14px 28px; border-radius: 999px; font-weight: 600; text-decoration: none; transition: all 0.3s; }
-  .ph-btn-primary { background: #C9A962; color: #FAF8F5; box-shadow: 0 8px 32px rgba(201, 169, 98, 0.25); }
-  .ph-btn-primary:hover { background: #D4B87A; transform: translateY(-2px); }
-  .ph-btn-secondary { background: transparent; color: #2E4A3E; border: 2px solid #2E4A3E; }
-  .ph-btn-secondary:hover { background: #2E4A3E; color: #FAF8F5; }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 16px; line-height: 1.6;
+    color: #2D2D2D; background: #FAF8F5;
+  }
+  .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+  .section { padding: 60px 24px; }
+  .section-eyebrow {
+    display: inline-block; font-size: 0.8125rem; font-weight: 600;
+    color: #C9A962; text-transform: uppercase; letter-spacing: 2px;
+    margin-bottom: 16px;
+  }
+  /* Dropdown thumbnail del form */
+  .alojamiento-thumb {
+    width: 60px; height: 60px;
+    border-radius: 8px;
+    border: 2px solid #FFFFFF;
+    cursor: pointer;
+    object-fit: cover;
+    flex-shrink: 0;
+    opacity: 0.7;
+    transition: all 0.2s;
+  }
+  .alojamiento-thumb.active, .alojamiento-thumb:hover { opacity: 1; transform: scale(1.05); }
 </style>
 </head>
 <body>
-<section class="ph-hero">
-  <p style="font-family:'Playfair Display',Georgia,serif; font-style:italic; color:#C9A962; letter-spacing:0.05em; text-transform:uppercase; font-size:0.875rem;">— Habitaciones y Tarifas —</p>
+
+<section class="alojamiento-hero">
+  <span class="section-eyebrow">— Lofts —</span>
   <h1>Lofts</h1>
-  <p>Lofts espaciosos y modernos.</p>
+  <p>Espacios amplios con diseño moderno, ideales para familias o grupos.</p>
 </section>
-<section class="ph-section">
-  <p>Esta sección forma parte de la próxima iteración de la página. Estamos trabajando para traerte aquí toda la información sobre Lofts.</p>
-  <p>Mientras tanto, escríbenos por WhatsApp y te contamos todo en persona.</p>
-  <div class="ph-buttons">
-    <a href="https://wa.me/56991924089?text=Hola%20CasaCuento%2C%20me%20interesa%20lofts" class="ph-btn ph-btn-primary" target="_blank" rel="noopener">Consultar por WhatsApp</a>
-    <a href="index.html#inicio" class="ph-btn ph-btn-secondary">← Volver al inicio</a>
+
+<section class="section">
+  <div class="container" style="max-width: 1100px;">
+
+    <article class="alojamiento-card">
+        <div class="alojamiento-card-grid">
+          <div class="alojamiento-gallery">
+            <img class="alojamiento-gallery-main" src="fotos-web/loft-arcaluz/img-01.webp" alt="ArcaLuz" />
+            <div class="alojamiento-thumbs"><img class="alojamiento-thumb active" src="fotos-web/loft-arcaluz/img-01.webp" data-src="fotos-web/loft-arcaluz/img-01.webp" alt="ArcaLuz 1" /><img class="alojamiento-thumb" src="fotos-web/loft-arcaluz/img-02.webp" data-src="fotos-web/loft-arcaluz/img-02.webp" alt="ArcaLuz 2" /><img class="alojamiento-thumb" src="fotos-web/loft-arcaluz/img-03.webp" data-src="fotos-web/loft-arcaluz/img-03.webp" alt="ArcaLuz 3" /><img class="alojamiento-thumb" src="fotos-web/loft-arcaluz/img-04.webp" data-src="fotos-web/loft-arcaluz/img-04.webp" alt="ArcaLuz 4" /></div>
+          </div>
+          <div class="alojamiento-body">
+            <span class="alojamiento-tipo">Loft</span>
+            <h2 class="alojamiento-nombre">ArcaLuz</h2>
+            <p class="alojamiento-descripcion">Loft amplio con diseño moderno, grandes ventanales y luz natural. Perfecto para familias o grupos que buscan espacio y comodidad.</p>
+            <div class="alojamiento-detalles">
+              <div class="alojamiento-detalle">
+                <div class="alojamiento-detalle-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4v16M22 4v16M2 8h20M2 16h20M6 12h12"/></svg>
+                </div>
+                <div class="alojamiento-detalle-label">Camas</div>
+                <div class="alojamiento-detalle-valor">2 (Queen + Single)</div>
+              </div>
+              <div class="alojamiento-detalle">
+                <div class="alojamiento-detalle-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+                </div>
+                <div class="alojamiento-detalle-label">Capacidad</div>
+                <div class="alojamiento-detalle-valor">3-4 personas</div>
+              </div>
+              <div class="alojamiento-detalle">
+                <div class="alojamiento-detalle-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+                </div>
+                <div class="alojamiento-detalle-label">Desde</div>
+                <div class="alojamiento-detalle-valor">$ XX.XXX / noche</div>
+              </div>
+            </div>
+
+            <div class="datos-bancarios-box">
+              <h4>💳 Datos para transferencia</h4>
+              <div class="datos-bancarios-dato"><strong>Nombre:</strong> <span>-</span></div>
+              <div class="datos-bancarios-dato"><strong>RUT:</strong> <span>-</span></div>
+              <div class="datos-bancarios-dato"><strong>Banco:</strong> <span>-</span></div>
+              <div class="datos-bancarios-dato"><strong>Tipo de cuenta:</strong> <span>-</span></div>
+              <div class="datos-bancarios-dato"><strong>N° de cuenta:</strong> <span>-</span></div>
+              <div class="datos-bancarios-dato"><strong>Email confirmación:</strong> <span>refugiocasacuento@gmail.com</span></div>
+              <p class="datos-bancarios-nota">Los datos definitivos se confirmarán con Alexis al momento de definir los precios.</p>
+            </div>
+
+            <form class="alojamiento-form" data-alojamiento-form data-alojamiento="Loft ArcaLuz">
+              <h3 class="alojamiento-form-title">Consultar disponibilidad</h3>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="loft-arcaluz-entrada">Entrada</label>
+                  <input type="date" name="fechaEntrada" id="loft-arcaluz-entrada" required />
+                </div>
+                <div class="form-group">
+                  <label for="loft-arcaluz-salida">Salida</label>
+                  <input type="date" name="fechaSalida" id="loft-arcaluz-salida" required />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="loft-arcaluz-personas">Personas</label>
+                <input type="number" name="personas" id="loft-arcaluz-personas" min="1" value="2" required />
+              </div>
+              <div class="alojamiento-form-acciones">
+                <button type="submit" class="btn btn-primary">Consultar por WhatsApp</button>
+                <a href="https://www.booking.com/hotel/cl/casa-cuento.es.html" target="_blank" rel="noopener" class="btn btn-bosque">Ver en Booking</a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </article>
+
+    <article class="alojamiento-card">
+        <div class="alojamiento-card-grid">
+          <div class="alojamiento-gallery">
+            <img class="alojamiento-gallery-main" src="fotos-web/loft-patioazul/img-01.webp" alt="PatioAzul" />
+            <div class="alojamiento-thumbs"><img class="alojamiento-thumb active" src="fotos-web/loft-patioazul/img-01.webp" data-src="fotos-web/loft-patioazul/img-01.webp" alt="PatioAzul 1" /><img class="alojamiento-thumb" src="fotos-web/loft-patioazul/img-02.webp" data-src="fotos-web/loft-patioazul/img-02.webp" alt="PatioAzul 2" /><img class="alojamiento-thumb" src="fotos-web/loft-patioazul/img-03.webp" data-src="fotos-web/loft-patioazul/img-03.webp" alt="PatioAzul 3" /><img class="alojamiento-thumb" src="fotos-web/loft-patioazul/img-04.webp" data-src="fotos-web/loft-patioazul/img-04.webp" alt="PatioAzul 4" /></div>
+          </div>
+          <div class="alojamiento-body">
+            <span class="alojamiento-tipo">Loft</span>
+            <h2 class="alojamiento-nombre">PatioAzul</h2>
+            <p class="alojamiento-descripcion">Loft con patio privado y decoración inspirada en los azules del mar. Espacio íntimo con personalidad propia.</p>
+            <div class="alojamiento-detalles">
+              <div class="alojamiento-detalle">
+                <div class="alojamiento-detalle-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4v16M22 4v16M2 8h20M2 16h20M6 12h12"/></svg>
+                </div>
+                <div class="alojamiento-detalle-label">Camas</div>
+                <div class="alojamiento-detalle-valor">1 King</div>
+              </div>
+              <div class="alojamiento-detalle">
+                <div class="alojamiento-detalle-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+                </div>
+                <div class="alojamiento-detalle-label">Capacidad</div>
+                <div class="alojamiento-detalle-valor">2 personas</div>
+              </div>
+              <div class="alojamiento-detalle">
+                <div class="alojamiento-detalle-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+                </div>
+                <div class="alojamiento-detalle-label">Desde</div>
+                <div class="alojamiento-detalle-valor">$ XX.XXX / noche</div>
+              </div>
+            </div>
+
+            <div class="datos-bancarios-box">
+              <h4>💳 Datos para transferencia</h4>
+              <div class="datos-bancarios-dato"><strong>Nombre:</strong> <span>-</span></div>
+              <div class="datos-bancarios-dato"><strong>RUT:</strong> <span>-</span></div>
+              <div class="datos-bancarios-dato"><strong>Banco:</strong> <span>-</span></div>
+              <div class="datos-bancarios-dato"><strong>Tipo de cuenta:</strong> <span>-</span></div>
+              <div class="datos-bancarios-dato"><strong>N° de cuenta:</strong> <span>-</span></div>
+              <div class="datos-bancarios-dato"><strong>Email confirmación:</strong> <span>refugiocasacuento@gmail.com</span></div>
+              <p class="datos-bancarios-nota">Los datos definitivos se confirmarán con Alexis al momento de definir los precios.</p>
+            </div>
+
+            <form class="alojamiento-form" data-alojamiento-form data-alojamiento="Loft PatioAzul">
+              <h3 class="alojamiento-form-title">Consultar disponibilidad</h3>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="loft-patioazul-entrada">Entrada</label>
+                  <input type="date" name="fechaEntrada" id="loft-patioazul-entrada" required />
+                </div>
+                <div class="form-group">
+                  <label for="loft-patioazul-salida">Salida</label>
+                  <input type="date" name="fechaSalida" id="loft-patioazul-salida" required />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="loft-patioazul-personas">Personas</label>
+                <input type="number" name="personas" id="loft-patioazul-personas" min="1" value="2" required />
+              </div>
+              <div class="alojamiento-form-acciones">
+                <button type="submit" class="btn btn-primary">Consultar por WhatsApp</button>
+                <a href="https://www.booking.com/hotel/cl/casa-cuento.es.html" target="_blank" rel="noopener" class="btn btn-bosque">Ver en Booking</a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </article>
+
   </div>
 </section>
+
 </body>
 </html>
