@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Habitaciones de Cuento en CasaCuento Hotel & Spa - suites de piedra y madera noble." />
+<meta name="theme-color" content="#2E4A3E" />
+<title>Habitaciones de Cuento · CasaCuento Hotel & Spa</title>
+<link rel="icon" type="image/png" href="assets/logo-magic-house-en.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/styles.css" />
+<script src="js/includes.js" defer></script>
+<script src="js/app.js" defer></script>
+</head>
+<body>
+
+<a href="#inicio" class="skip-link">Saltar al contenido principal</a>
+<div data-include="partials/header.html"></div>
+
+<main id="inicio">
+  <section class="service-hero">
+    <div class="service-hero-bg" aria-hidden="true"></div>
+    <div class="service-hero-overlay" aria-hidden="true"></div>
+    <div class="container">
+      <div class="service-hero-content reveal">
+        <span class="section-eyebrow">— Servicio —</span>
+        <h1 class="service-hero-title">Habitaciones de Cuento</h1>
+        <p class="service-hero-subtitle">Suites de piedra y madera noble, equipadas para el descanso más profundo.</p>
+        <div class="service-hero-actions">
+          <a href="habitaciones.html" class="btn btn-primary">Ver tipos de habitaciones</a>
+          <a href="index.html" class="btn btn-secondary">Volver al inicio</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top: 60px;">
+    <div class="container" style="max-width: 880px;">
+      <div class="section-header reveal">
+        <h2 class="section-title">Descanso profundo</h2>
+        <p class="section-subtitle">Las suites combinan piedra y madera noble. Están equipadas con ropa de cama premium, calefacción y todo lo necesario para un descanso profundo. Cada habitación tiene su propio carácter, inspirado en el bosque que las rodea.</p>
+      </div>
+
+      <div class="service-features reveal">
+        <div class="service-feature">
+          <div class="service-feature-icon">🛏️</div>
+          <h3>Ropa de cama premium</h3>
+          <p>Sábanas de algodón de alto gramaje y枕头 hipoalergénicos.</p>
+        </div>
+        <div class="service-feature">
+          <div class="service-feature-icon">🔥</div>
+          <h3>Calefacción</h3>
+          <p>Calefacción central para que el invierno sea cálido y silencioso.</p>
+        </div>
+        <div class="service-feature">
+          <div class="service-feature-icon">🌙</div>
+          <h3>Privacidad</h3>
+          <p>Cada suite está pensada para ofrecer silencio y descanso sin interrupciones.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section service-gallery-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-eyebrow">— Galería —</span>
+        <h2 class="section-title">Ambientes que invitan</h2>
+        <p class="section-subtitle">Una selección de imágenes de las habitaciones.</p>
+      </div>
+      <div class="service-gallery">
+        <figure class="service-gallery-item"><img src="fotos-web/galeria/galeria-02.webp" alt="Habitación boutique" loading="lazy" /></figure>
+        <figure class="service-gallery-item"><img src="fotos-web/galeria/galeria-03.webp" alt="Loft moderno" loading="lazy" /></figure>
+        <figure class="service-gallery-item"><img src="fotos-web/galeria/galeria-04.webp" alt="Suite con vista" loading="lazy" /></figure>
+        <figure class="service-gallery-item"><img src="fotos-web/galeria/galeria-09.webp" alt="Detalle arquitectónico" loading="lazy" /></figure>
+      </div>
+      <p class="service-gallery-note">Imágenes placeholder. Se reemplazarán por contenido generado con IA según indique el cliente.</p>
+    </div>
+  </section>
+
+  <section class="section service-cta-section">
+    <div class="container">
+      <div class="service-cta-card reveal">
+        <h2 class="service-cta-title">¿Quieres ver los tipos de habitación?</h2>
+        <p class="service-cta-text">Tenemos 8 opciones: 2 habitaciones, 2 lofts, 2 suites y 2 cabañas. Visita la página de tipos para ver todas.</p>
+        <a href="habitaciones.html" class="btn btn-primary">Ver tipos de habitaciones</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div data-include="partials/footer.html"></div>
+<div data-include="partials/chatbot.html"></div>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Imagen ampliada">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Cerrar">✕</button>
+  <img id="lightboxImg" src="" alt="" />
+</div>
+
+</body>
+</html>
