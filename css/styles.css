@@ -309,7 +309,8 @@ h1, h2, h3, h4, h5, h6 { font-weight: 600; line-height: 1.2; }
   font-style: italic;
 }
 .footer-social { display: flex; gap: 10px; margin-top: 8px; }
-.footer-social a {
+.footer-social a,
+.footer-social span {
   width: 36px; height: 36px;
   display: grid; place-items: center;
   background: rgba(201, 169, 98, 0.1);
@@ -317,6 +318,7 @@ h1, h2, h3, h4, h5, h6 { font-weight: 600; line-height: 1.2; }
   border-radius: 50%;
   color: var(--color-gold-light);
   transition: all var(--transition-fast);
+  cursor: default;
 }
 .footer-social a:hover {
   background: var(--color-gold);
