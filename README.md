@@ -2,7 +2,7 @@
 
 Sitio web promocional oficial del Hotel Boutique CasaCuento, ubicado en Mantagua, Concón, V Región, Chile.
 
-🌐 **Sitio en vivo:** [https://casacuento.netlify.app](https://casacuento.netlify.app)
+🌐 **Sitio en vivo:** [https://casacuento.vercel.app](https://casacuento.vercel.app)
 📦 **Repositorio:** [github.com/HeidriumAguirre/CasaCuento](https://github.com/HeidriumAguirre/CasaCuento)
 
 ---
@@ -59,7 +59,7 @@ Landing page moderna, elegante y 100% responsive (mobile-first) construida en un
 
 ## 🚀 Despliegue
 
-El sitio está desplegado automáticamente en **Netlify** desde este repositorio de GitHub:
+El sitio está desplegado automáticamente en **Vercel** desde este repositorio de GitHub:
 
 - **Cada `git push` a `main` dispara un nuevo deploy automático**
 - **Branch previews:** cada PR genera una URL temporal de preview
@@ -67,13 +67,13 @@ El sitio está desplegado automáticamente en **Netlify** desde este repositorio
 
 ### URL de producción
 
-🔗 [https://casacuento.netlify.app](https://casacuento.netlify.app)
+🔗 [https://casacuento.vercel.app](https://casacuento.vercel.app)
 
 ---
 
 ## ✏️ Cómo actualizar el sitio
 
-1. Edita el archivo `index.html` localmente
+1. Edita los archivos localmente
 2. Haz commit de los cambios:
    ```bash
    git add .
@@ -83,7 +83,7 @@ El sitio está desplegado automáticamente en **Netlify** desde este repositorio
    ```bash
    git push origin main
    ```
-4. Netlify detectará el push y desplegará automáticamente en ~30 segundos
+4. Vercel detectará el push y desplegará automáticamente en ~30 segundos
 
 ---
 

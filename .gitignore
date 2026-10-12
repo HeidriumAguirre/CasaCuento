@@ -6,11 +6,6 @@ desktop.ini
 # Windows
 $RECYCLE.BIN/
 
-# Netlify
-.netlify/
-netlify/
-
-
 # IDEs / Editores
 .vscode/
 .idea/
@@ -40,6 +35,3 @@ package-lock.json
 
 # PDF original (no se sube al repo, se mantiene solo en local)
 Propuesta_Web_CasaCuento_Alexis.pdf
-
-# Local Netlify folder
-.netlify
