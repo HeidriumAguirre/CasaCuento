@@ -904,30 +904,30 @@ h1, h2, h3, h4, h5, h6 { font-weight: 600; line-height: 1.2; }
 }
 .alojamiento-thumb.active, .alojamiento-thumb:hover { opacity: 1; transform: scale(1.05); }
 
-.alojamiento-body { padding: 24px 28px; }
+.alojamiento-body { padding: 18px 20px; }
 .alojamiento-tipo {
   display: inline-block;
   padding: 3px 10px;
   background: var(--color-sand);
   color: var(--color-forest);
   font-family: var(--font-body);
-  font-size: 0.7rem; font-weight: 600;
+  font-size: 0.65rem; font-weight: 600;
   border-radius: 999px;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 .alojamiento-nombre {
   font-family: var(--font-display);
-  font-size: 1.3rem; color: var(--color-forest);
-  margin: 0 0 8px;
+  font-size: 1.1rem; color: var(--color-forest);
+  margin: 0 0 6px;
   font-weight: 600;
 }
 .alojamiento-descripcion {
   color: var(--color-text-dark);
-  line-height: 1.55;
-  margin-bottom: 12px;
-  font-size: 0.85rem;
+  line-height: 1.5;
+  margin-bottom: 10px;
+  font-size: 0.8rem;
 }
 .alojamiento-detalles {
   display: grid;
@@ -954,7 +954,7 @@ h1, h2, h3, h4, h5, h6 { font-weight: 600; line-height: 1.2; }
   margin-bottom: 1px;
 }
 .alojamiento-detalle-valor {
-  font-size: 0.8rem;
+  font-size: 0.72rem;
   color: var(--color-forest);
   font-weight: 600;
 }
@@ -962,15 +962,15 @@ h1, h2, h3, h4, h5, h6 { font-weight: 600; line-height: 1.2; }
 .alojamiento-form {
   background: var(--color-sand);
   border-radius: var(--radius-sm);
-  padding: 16px;
-  margin-top: 14px;
+  padding: 12px;
+  margin-top: 12px;
   border: 1px solid var(--color-sand-dark);
 }
 .alojamiento-form-title {
   font-family: var(--font-display);
-  font-size: 1rem;
+  font-size: 0.875rem;
   color: var(--color-forest);
-  margin: 0 0 12px;
+  margin: 0 0 10px;
   text-align: center;
   font-weight: 600;
 }
